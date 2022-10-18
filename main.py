@@ -156,7 +156,7 @@ def show_post(post_id):
                 text=c_form.comment.data,
                 comment_author=current_user,
                 parent_post=requested_post
-                )
+            )
 
             db.session.add(new_comment)
             db.session.commit()
@@ -224,5 +224,6 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('get_all_posts'))
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
