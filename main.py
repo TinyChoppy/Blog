@@ -76,8 +76,8 @@ class Comment(db.Model):
 
 
 # create multiple table in database
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 
 def admin_only(f):
